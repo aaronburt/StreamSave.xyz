@@ -1,0 +1,46 @@
+.card { 
+    margin: 0px !important;
+}
+
+.link-button {
+    background-color: transparent !important;
+    color: orange !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    margin-right: 22px !important;
+    padding: 0 !important;
+
+    vertical-align:-webkit-baseline-middle;
+
+}
+
+.btn i, .btn-large i, .btn-small i, .btn-floating i, .btn-large i, .btn-small i, .btn-flat i {
+    line-height: normal !important;
+}
+
+.card .card-action {
+    border-top: none !important;
+}
+
+.link-button:focus {
+    background-color: transparent !important;
+}
+
+#toast-container { 
+    top: auto !important; 
+    right: auto !important; 
+    bottom: 3%; left:1%; 
+}
+
+
+.noHoverBackground:hover {
+    background-color: transparent !important;
+}
+
+/* VIDEOJS */
+.video-js {
+    font-size: 15px !important;
+}
