@@ -1,34 +1,16 @@
-/* <JavaScript> */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import M from 'materialize-css'
-
-/* <CSSImport> */ 
 import './index.css';
-import 'materialize-css/dist/css/materialize.min.css';
-
-/* Components */
-import Content from './Content'
-
-/* <Init> */ 
-M.AutoInit();
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Wrapper from './partials/wrapper';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/">
-          <div>es</div>
-        </Route>
-      </Switch>
-
-
-      <Switch>
-        <Route path="/c/:id" component={Content}/>
+        <Route exact path="/v/:id" component={Wrapper} />
       </Switch>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode> ,
   document.getElementById('root')
 );
-

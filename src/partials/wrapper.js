@@ -1,7 +1,6 @@
 import React from 'react';
-import Description from './description'; 
-import Player from './player';
-
+import Player from './sub-partials/player';
+import Description from './sub-partials/description';
 
 class Wrapper extends React.Component {
 
@@ -10,10 +9,8 @@ class Wrapper extends React.Component {
         this.state = { success: false, status: false }
     }
 
-
-    componentDidMount(){
-            
-        fetch('https://bunnyvideo-get.dsh.workers.dev/' + this.props.match.params.id)
+    componentDidMount(){            
+        fetch('https://fetch-video.streamsave.xyz/' + this.props.match.params.id)
             .then(response => { return response.json() })
             .then(data => { 
                 let shortMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -24,10 +21,7 @@ class Wrapper extends React.Component {
                     video: { vId: data.guid, vTitle: data.title, vViews: data.views, vTime: newTimeStamp }
                 })
             })
-            .catch(err => {
-                this.setState({ status: 'error loading...' })
-            }) 
-
+            .catch(err => { this.setState({ status: 'error loading...' }) }) 
     }
 
     render(){
@@ -45,5 +39,7 @@ class Wrapper extends React.Component {
         }
     }
 }
+
+/*<Description title={vTitle} views={vViews} time={vTime} />*/
 
 export default Wrapper;
